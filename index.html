@@ -104,16 +104,12 @@
                   
                   // Append the new URLSearchParams object to the existing URL
                   // if(params.size == 0){
-                  //   console.log(params.size);
-                  //   console.log(params.toString());
-                  //   window.history.pushState(null, null, params.toString());
+                  //   window.history.pushState(null, null, window.location.pathname);
                   // }else{
-                  //   console.log(params.size)
                   //   window.history.pushState(null, null, '?' + params.toString());
                   // }
-                  window.history.pushState(null, null,'?' + params.toString());
+                  window.history.pushState(null, null, (params.size == 0)?window.location.pathname:'?' + params.toString());
                   allTabVal = params.getAll('tab');
-                  console.log(allTabVal);
 
                 }
 
